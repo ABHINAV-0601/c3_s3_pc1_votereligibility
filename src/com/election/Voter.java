@@ -22,5 +22,14 @@ public class Voter {
     public int getAge() {
         return age;
     }
-
+    public String getAgeCriteria(){
+        if(age >= VOTER_ELIGIBLE_AGE){
+            return name + "Is eligible to Vote";
+        } else if (age < VOTER_ELIGIBLE_AGE) {
+            return name + "Is not eligible to Vote";
+        } else if (age < 0) {
+            return "Age can't be negative or zero";
+        }
+        return null;
+    }
 }
